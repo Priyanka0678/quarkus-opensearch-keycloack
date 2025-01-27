@@ -56,7 +56,7 @@ public class OpenSearchClientProducer {
     @Produces
     public RestHighLevelClient createClient() {
         return new RestHighLevelClient(
-                RestClient.builder(new HttpHost(host, 9204, "http"))
+                RestClient.builder(new HttpHost(host, 9200, "https"))
         );
     }
 }
