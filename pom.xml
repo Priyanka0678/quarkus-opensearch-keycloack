@@ -1,5 +1,5 @@
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.example</groupId>
   <artifactId>opensearch-crud</artifactId>
@@ -37,52 +37,65 @@
     </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-junit5</artifactId>
+      <artifactId>quarkus-vertx-http</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-smallrye-health</artifactId>
+    </dependency>
+     
+        
+   <dependency>
+        <groupId>io.quarkus</groupId>
+        <artifactId>quarkus-junit5</artifactId>
       <scope>test</scope>
     </dependency>
+    
     <dependency>
       <groupId>io.rest-assured</groupId>
       <artifactId>rest-assured</artifactId>
       <scope>test</scope>
     </dependency>
-      <!-- <dependency>
-        <groupId>io.quarkus</groupId>
-        <artifactId>quarkus-resteasy-reactive</artifactId>
-    </dependency> -->
 
-
-
-<!--    <dependency>-->
-<!--      <groupId>io.quarkus</groupId>-->
-<!--      <artifactId>quarkus-resteasy</artifactId>-->
-<!--      <version>3.15.1</version>-->
-<!--    </dependency>-->
-<!--       <dependency>-->
-<!--        <groupId>io.quarkus</groupId>-->
-<!--        <artifactId>quarkus-jsonb</artifactId>-->
-<!--    </dependency>-->
-      
-      <!-- <dependency>
-    <groupId>org.apache.httpcomponents.client5</groupId>
-    <artifactId>httpclient5</artifactId>
-    <version>5.4</version>
-</dependency> -->
-      
-      
-      
-      
-   <dependency>
-        <groupId>org.opensearch.client</groupId>
-        <artifactId>opensearch-rest-high-level-client</artifactId>
-        <version>2.5.0</version>
+    <dependency>
+    <groupId>org.opensearch.client</groupId>
+    <artifactId>opensearch-rest-high-level-client</artifactId>
+      <version>2.5.0</version>
     </dependency>
+
+    <dependency>
+    <groupId>io.quarkus</groupId>
+    <artifactId>quarkus-resteasy-jsonb</artifactId>
+    </dependency>
+
+    <!-- <dependency>
+    <groupId>io.quarkus</groupId>
+    <artifactId>quarkus-oidc</artifactId>
+    </dependency>
+
+    <dependency>
+    <groupId>io.quarkus</groupId>
+    <artifactId>quarkus-smallrye-jwt</artifactId>
+    </dependency> 
+
+    <dependency>
+    <groupId>io.quarkus</groupId>
+    <artifactId>quarkus-keycloak-authorization</artifactId>
+  </dependency>
+
     <dependency>
       <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-resteasy-jsonb</artifactId>
+      <artifactId>quarkus-security</artifactId>
+    </dependency> -->
+    
+    <dependency>
+      <groupId>org.opensearch.client</groupId>
+      <artifactId>opensearch-java</artifactId>
+      <version>2.19.0</version>
     </dependency>
+  </dependencies> 
 
-
-  </dependencies>
+  
   <build>
     <plugins>
       <plugin>
@@ -155,4 +168,3 @@
     </profile>
   </profiles>
 </project>
-
